@@ -45,6 +45,7 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fnf-games.online/"},{"@type":"ListItem","position":2,"name":"FNF\r\n                Games","item":"https://fnf-games.online/fnf-games.games/"},{"@type":"ListItem","position":3,"name":"FNF: Minecraft Funky Edition","item":"https://fnf-games.online/fnf-minecraft-funky-edition"}]}</script>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preload" as="image" href="/assets/images/fnf-minecraft-funky-edition.webp">
 </head>
 
 <body class="sidebar-collapsed">
@@ -161,8 +162,11 @@
                 <div class="hero-main-area">
                     <div class="hero-player-area">
                         <div class="hero-player-container cropped-iframe" id="gameFrameContainer">
-                            <iframe src="https://fnf.kdata1.com/minecraft-funky-edition/1/" id="gameFrame"
-                                allowfullscreen loading="lazy"></iframe>
+                        <div class="play-placeholder" data-src="https://fnf.kdata1.com/minecraft-funky-edition/1/" data-id="gameFrame" style="background-image: url('/assets/images/fnf-minecraft-funky-edition.webp')">
+                            <div class="play-button">
+                                <i data-lucide="play"></i>
+                            </div>
+                        </div>
                         </div>
                         <div class="game-controls">
                             <div class="control-title-left">
@@ -283,7 +287,7 @@
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin-top: 20px;">
                         <!-- Card 1: Herobrine -->
                         <a href="/fnf-herobrine" style="display: flex; align-items: center; gap: 15px; text-decoration: none; background: rgba(255,255,255,0.03); border-radius: 12px; padding: 12px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.2s, background 0.2s;" onmouseover="this.style.transform='translateX(5px)'; this.style.background='rgba(76, 209, 55, 0.1)'" onmouseout="this.style.transform='translateX(0)'; this.style.background='rgba(255,255,255,0.03)'">
-                            <img src="/assets/images/fnf-herobrine.webp" alt="Herobrine" style="width: 70px; height: 70px; border-radius: 8px; object-fit: cover;">
+                            <img loading="lazy" src="/assets/images/fnf-herobrine.webp" alt="Herobrine" style="width: 70px; height: 70px; border-radius: 8px; object-fit: cover;">
                             <div style="flex: 1;">
                                 <strong style="font-size: 1rem; display: block; margin-bottom: 2px;">FNF: Herobrine</strong>
                                 <span style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.3; display: block;">Features a darker Minecraft-inspired setting with intense musical battles.</span>
@@ -293,7 +297,7 @@
 
                         <!-- Card 2: Level Devil -->
                         <a href="/fnf-vs-level-devil" style="display: flex; align-items: center; gap: 15px; text-decoration: none; background: rgba(255,255,255,0.03); border-radius: 12px; padding: 12px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.2s, background 0.2s;" onmouseover="this.style.transform='translateX(5px)'; this.style.background='rgba(238, 82, 83, 0.1)'" onmouseout="this.style.transform='translateX(0)'; this.style.background='rgba(255,255,255,0.03)'">
-                            <img src="/assets/images/fnf-vs-level-devil.webp" alt="Level Devil" style="width: 70px; height: 70px; border-radius: 8px; object-fit: cover;">
+                            <img loading="lazy" src="/assets/images/fnf-vs-level-devil.webp" alt="Level Devil" style="width: 70px; height: 70px; border-radius: 8px; object-fit: cover;">
                             <div style="flex: 1;">
                                 <strong style="font-size: 1rem; display: block; margin-bottom: 2px;">FNF Vs Level Devil</strong>
                                 <span style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.3; display: block;">Introduces unusual rhythm patterns and a challenging gameplay style.</span>

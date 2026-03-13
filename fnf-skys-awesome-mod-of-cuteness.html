@@ -45,6 +45,7 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fnf-games.online/"},{"@type":"ListItem","position":2,"name":"FNF\r\n                Games","item":"https://fnf-games.online/fnf-games.games/"},{"@type":"ListItem","position":3,"name":"FNF: Sky’s Awesome Mod of Cuteness!!","item":"https://fnf-games.online/fnf-skys-awesome-mod-of-cuteness"}]}</script>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preload" as="image" href="/assets/images/fnf-sky-s-awesome-mod-of-cuteness.webp">
 </head>
 
 <body class="sidebar-collapsed">
@@ -161,8 +162,11 @@
                 <div class="hero-main-area">
                     <div class="hero-player-area">
                         <div class="hero-player-container cropped-iframe" id="gameFrameContainer">
-                            <iframe src="https://fnf.kdata1.com/2025/skyawesome/1/" id="gameFrame"
-                                allowfullscreen loading="lazy"></iframe>
+                        <div class="play-placeholder" data-src="https://fnf.kdata1.com/2025/skyawesome/1/" data-id="gameFrame" style="background-image: url('/assets/images/fnf-sky-s-awesome-mod-of-cuteness.webp')">
+                            <div class="play-button">
+                                <i data-lucide="play"></i>
+                            </div>
+                        </div>
                         </div>
                         <div class="game-controls">
                             <div class="control-title-left">
@@ -359,7 +363,7 @@
                             onmouseout="this.style.transform='';this.style.background='rgba(255,255,255,0.03)'">
                             <div
                                 style="width: 80px; height: 80px; flex-shrink: 0; border-radius: 8px; overflow: hidden; background: rgba(0,0,0,0.2);">
-                                <img src="/assets/images/fnf-starcatcher.webp" alt="FNF StarCatcher"
+                                <img loading="lazy" src="/assets/images/fnf-starcatcher.webp" alt="FNF StarCatcher"
                                     style="width: 100%; height: 100%; object-fit: cover;">
                             </div>
                             <div>
@@ -375,7 +379,7 @@
                             onmouseout="this.style.transform='';this.style.background='rgba(255,255,255,0.03)'">
                             <div
                                 style="width: 80px; height: 80px; flex-shrink: 0; border-radius: 8px; overflow: hidden; background: rgba(0,0,0,0.2);">
-                                <img src="/assets/images/fnf-cassandra.webp" alt="FNF Cassandra"
+                                <img loading="lazy" src="/assets/images/fnf-cassandra.webp" alt="FNF Cassandra"
                                     style="width: 100%; height: 100%; object-fit: cover;">
                             </div>
                             <div>

@@ -574,7 +574,7 @@ aside.sidebar {
 /* Hero Section */
 /* Hero Section Refactor */
 .hero {
-    background: var(--hero-overlay), url('../images/hero-bg.jpg');
+    background: var(--hero-overlay);
     background-size: cover;
     background-position: center;
     padding: 30px;
@@ -666,6 +666,67 @@ aside.sidebar {
     height: 100%;
     border: none;
 }
+
+/* Play Placeholder */
+.play-placeholder {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.play-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease;
+}
+
+.play-placeholder:hover::before {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.play-placeholder:hover {
+    transform: scale(1.02);
+}
+
+.play-button {
+    position: relative;
+    z-index: 2;
+    width: 80px;
+    height: 80px;
+    background: var(--accent-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.play-button i {
+    width: 40px;
+    height: 40px;
+    color: #000;
+    margin-left: 5px;
+}
+
+.play-placeholder:hover .play-button {
+    transform: scale(1.2);
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.8);
+    background: #fff;
+}
+
 
 /* Specific class added to child game pages to hide external top banners */
 .cropped-iframe iframe {

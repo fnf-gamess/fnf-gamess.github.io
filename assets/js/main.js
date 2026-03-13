@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.lucide) {
         lucide.createIcons();
     }
+    // Init Play Buttons
+    initPlayButtons();
+
     // Lazy Loader for Game Thumbnails
     const lazyImages = document.querySelectorAll('.lazy-thumb');
 
@@ -537,4 +540,19 @@ function renderDynamicGrids() {
     if (paginationContainer) {
         paginationContainer.style.display = 'none';
     }
+}
+
+// Init "Click to Play" for iframes (Performance Optimization)
+function initPlayButtons() {
+    const containers = document.querySelectorAll('.hero-player-container');
+    containers.forEach(container => {
+        const placeholder = container.querySelector('.play-placeholder');
+        if (placeholder) {
+            placeholder.addEventListener('click', () => {
+                const iframeSrc = placeholder.dataset.src;
+                // Preserve ID and other attributes if needed
+                container.innerHTML = `<iframe src="${iframeSrc}" id="gameFrame" allowfullscreen loading="lazy"></iframe>`;
+            });
+        }
+    });
 }

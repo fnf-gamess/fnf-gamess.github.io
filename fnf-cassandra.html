@@ -48,6 +48,7 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fnf-games.online/"},{"@type":"ListItem","position":2,"name":"FNF Games","item":"https://fnf-games.online/fnf-games.games/"},{"@type":"ListItem","position":3,"name":"FNF Cassandra","item":"https://fnf-games.online/fnf-cassandra"}]}</script>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preload" as="image" href="/assets/images/fnf-cassandra.webp">
 </head>
 
 <body class="sidebar-collapsed">
@@ -168,8 +169,11 @@
                 <div class="hero-main-area">
                     <div class="hero-player-area">
                         <div class="hero-player-container cropped-iframe" id="gameFrameContainer">
-                            <iframe src="https://st.8games.net/7/igra-fnf-kassandra/index-en.html" id="gameFrame"
-                                allowfullscreen loading="lazy"></iframe>
+                        <div class="play-placeholder" data-src="https://st.8games.net/7/igra-fnf-kassandra/index-en.html" data-id="gameFrame" style="background-image: url('/assets/images/fnf-cassandra.webp')">
+                            <div class="play-button">
+                                <i data-lucide="play"></i>
+                            </div>
+                        </div>
                         </div>
                         <div class="game-controls">
                             <div class="control-title-left">
@@ -290,7 +294,7 @@
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin-top: 20px;">
                         <!-- Card 1: Sky -->
                         <a href="/fnf-skys-awesome-mod-of-cuteness" style="display: flex; align-items: center; gap: 15px; text-decoration: none; background: rgba(255,255,255,0.03); border-radius: 12px; padding: 12px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.2s, background 0.2s;" onmouseover="this.style.transform='translateX(5px)'; this.style.background='rgba(255, 175, 190, 0.1)'" onmouseout="this.style.transform='translateX(0)'; this.style.background='rgba(255,255,255,0.03)'">
-                            <img src="/assets/images/fnf-skys-awesome-mod-of-cuteness.webp" alt="Sky" style="width: 70px; height: 70px; border-radius: 8px; object-fit: cover;">
+                            <img loading="lazy" src="/assets/images/fnf-skys-awesome-mod-of-cuteness.webp" alt="Sky" style="width: 70px; height: 70px; border-radius: 8px; object-fit: cover;">
                             <div style="flex: 1;">
                                 <strong style="font-size: 1rem; display: block; margin-bottom: 2px;">FNF: Sky’s Awesome Mod</strong>
                                 <span style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.3; display: block;">Features sparkling cosmic visuals and upbeat musical tracks.</span>
@@ -300,7 +304,7 @@
 
                         <!-- Card 2: Sweet Licorice -->
                         <a href="/fnf-sweet-licorice" style="display: flex; align-items: center; gap: 15px; text-decoration: none; background: rgba(255,255,255,0.03); border-radius: 12px; padding: 12px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.2s, background 0.2s;" onmouseover="this.style.transform='translateX(5px)'; this.style.background='rgba(255, 121, 121, 0.1)'" onmouseout="this.style.transform='translateX(0)'; this.style.background='rgba(255,255,255,0.03)'">
-                            <img src="/assets/images/fnf-sweet-licorice.webp" alt="Sweet Licorice" style="width: 70px; height: 70px; border-radius: 8px; object-fit: cover;">
+                            <img loading="lazy" src="/assets/images/fnf-sweet-licorice.webp" alt="Sweet Licorice" style="width: 70px; height: 70px; border-radius: 8px; object-fit: cover;">
                             <div style="flex: 1;">
                                 <strong style="font-size: 1rem; display: block; margin-bottom: 2px;">FNF Sweet Licorice</strong>
                                 <span style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.3; display: block;">Delivers a playful rhythm experience with a vibrant candy-inspired theme.</span>

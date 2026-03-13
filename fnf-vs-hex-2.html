@@ -52,6 +52,7 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fnf-games.online/"},{"@type":"ListItem","position":2,"name":"FNF Games","item":"https://fnf-games.online/fnf-games.games/"},{"@type":"ListItem","position":3,"name":"FNF Vs. Hex 2","item":"https://fnf-games.online/fnf-vs-hex-2"}]}</script>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preload" as="image" href="/assets/images/fnf-vs-hex-2.webp">
 </head>
 
 <body class="sidebar-collapsed">
@@ -173,7 +174,11 @@
                 <div class="hero-main-area">
                     <div class="hero-player-area">
                         <div class="hero-player-container cropped-iframe" id="gameFrameContainer">
-                            <iframe src="https://fnf.kdata1.com/hex-weekend/2/" id="gameFrame" allowfullscreen loading="lazy"></iframe>
+                        <div class="play-placeholder" data-src="https://fnf.kdata1.com/hex-weekend/2/" data-id="gameFrame" style="background-image: url('/assets/images/fnf-vs-hex-2.webp')">
+                            <div class="play-button">
+                                <i data-lucide="play"></i>
+                            </div>
+                        </div>
                         </div>
 
                         <!-- Control Bar -->
@@ -305,7 +310,7 @@
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin-top: 20px;">
                         <!-- Card 1: Garcello -->
                         <a href="/fnf-vs-garcello" style="display: flex; align-items: center; gap: 15px; text-decoration: none; background: rgba(255,255,255,0.03); border-radius: 12px; padding: 12px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.2s, background 0.2s;" onmouseover="this.style.transform='translateX(5px)'; this.style.background='rgba(46, 204, 113, 0.1)'" onmouseout="this.style.transform='translateX(0)'; this.style.background='rgba(255,255,255,0.03)'">
-                            <img src="/assets/images/fnf-vs-garcello.webp" alt="Garcello" style="width: 70px; height: 70px; border-radius: 8px; object-fit: cover;">
+                            <img loading="lazy" src="/assets/images/fnf-vs-garcello.webp" alt="Garcello" style="width: 70px; height: 70px; border-radius: 8px; object-fit: cover;">
                             <div style="flex: 1;">
                                 <strong style="font-size: 1rem; display: block; margin-bottom: 2px;">FNF Vs Garcello</strong>
                                 <span style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.3; display: block;">A touching musical journey featuring a calm yet powerful atmosphere.</span>
@@ -315,7 +320,7 @@
 
                         <!-- Card 2: StarCatcher -->
                         <a href="/fnf-starcatcher" style="display: flex; align-items: center; gap: 15px; text-decoration: none; background: rgba(255,255,255,0.03); border-radius: 12px; padding: 12px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.2s, background 0.2s;" onmouseover="this.style.transform='translateX(5px)'; this.style.background='rgba(155, 89, 182, 0.1)'" onmouseout="this.style.transform='translateX(0)'; this.style.background='rgba(255,255,255,0.03)'">
-                            <img src="/assets/images/fnf-starcatcher.webp" alt="StarCatcher" style="width: 70px; height: 70px; border-radius: 8px; object-fit: cover;">
+                            <img loading="lazy" src="/assets/images/fnf-starcatcher.webp" alt="StarCatcher" style="width: 70px; height: 70px; border-radius: 8px; object-fit: cover;">
                             <div style="flex: 1;">
                                 <strong style="font-size: 1rem; display: block; margin-bottom: 2px;">FNF StarCatcher</strong>
                                 <span style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.3; display: block;">Offers a whimsical rhythm adventure under a star-filled sky.</span>
