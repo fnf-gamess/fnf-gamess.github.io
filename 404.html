@@ -27,6 +27,32 @@
 
     <link rel="stylesheet" href="/assets/css/styles.css">
     
+    <script>
+        // Trailing Slash Redirect for Game Pages (GitHub Pages 404 handler)
+        (function() {
+            var path = window.location.pathname;
+            // List of paths that SHOULD have a trailing slash (categories and static pages)
+            var slashPaths = [
+                '/horror.games/', '/music.games/', '/arcade.games/', '/fnf-mods/',
+                '/rhythm.games/', '/new-games/', '/hot-games/', '/favorite-games/',
+                '/search/', '/about-us/', '/contact-us/', '/dmca/', 
+                '/privacy-policy/', '/terms-of-service/'
+            ];
+            
+            if (path.endsWith('/') && path.length > 1) {
+                var lowerPath = path.toLowerCase();
+                var shouldHaveSlash = slashPaths.some(function(p) {
+                    return lowerPath === p.toLowerCase();
+                });
+                
+                if (!shouldHaveSlash) {
+                    var cleanPath = path.slice(0, -1);
+                    window.location.replace(cleanPath + window.location.search + window.location.hash);
+                }
+            }
+        })();
+    </script>
+
     <style>
         .error-container {
             display: flex;
