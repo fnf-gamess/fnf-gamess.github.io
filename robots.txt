@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /search/
+Disallow: /*?*
+
+Sitemap: https://fnf-games.online/sitemap.xml
