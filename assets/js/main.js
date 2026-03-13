@@ -1,3 +1,4 @@
+var countDownDate = null;
 document.addEventListener('DOMContentLoaded', () => {
     // Init Lucide
     if (window.lucide) {
