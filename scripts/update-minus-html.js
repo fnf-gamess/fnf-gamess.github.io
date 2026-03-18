@@ -5,10 +5,10 @@ const filePath = path.join(__dirname, '../fnf-minus/index.html');
 let html = fs.readFileSync(filePath, 'utf8');
 
 // 1. Update Title & Meta Tags
-html = html.replace(/<title>.*?<\/title>/, '<title>FNF Minus – Iconic Visual Overhaul Rhythm Mod</title>');
+html = html.replace(/<title>.*?<\/title>/, '<title>FNF Minus</title>');
 html = html.replace(/<meta name="description"[\s\S]*?>/, '<meta name="description"\n        content="Experience the bold FNF Minus visual overhaul. Every character reimagined based on health bar icons in this stylish and popular Friday Night Funkin’ mod.">');
 
-html = html.replace(/<meta property="og:title" content=".*?">/, '<meta property="og:title" content="FNF Minus – Iconic Visual Overhaul Rhythm Mod">');
+html = html.replace(/<meta property="og:title" content=".*?">/, '<meta property="og:title" content="FNF Minus">');
 html = html.replace(/<meta property="og:description"[\s\S]*?>/, '<meta property="og:description"\n        content="Experience the bold FNF Minus visual overhaul. Every character reimagined based on health bar icons in this stylish and popular Friday Night Funkin’ mod.">');
 
 // Update schema description
